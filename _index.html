@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Тетрис</title>
+    <style>
+        body{
+            background:#202028;
+            color:#fff;
+            font-family: sans-serif;
+            margin-left: 650px;
+
+        }
+
+    </style>
+
+</head>
+<body>
+    <p>Game Tetris</p>
+    <form action="_main.html" method="get">
+    <p>Enter your nickname:</p>
+    <input placeholder="Nickname" id="1">
+    <input type="button" value ="Enter" onclick="checkEmpty()">
+    </form>
+</body>
+<script>
+
+    var txt = document.getElementById("1");
+
+    if(localStorage.length>0){
+        txt.value = localStorage.getItem((localStorage.length-1).toString());
+    }
+    function checkEmpty(){
+        if(txt.value!=="") {
+            go();
+
+        }else {
+            alert("Placeholder must be not empty! Try to enter your nickname.");
+        }
+
+    }
+    window.go=function () {
+
+        localStorage.setItem(localStorage.length.toString(),txt.value);
+        window.location = "_main.html"
+    }
+</script>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tetris</title>
+    <style>
+        body{
+            background:#202028;
+            color:#fff;
+            font-family: sans-serif;
+
+
+        }
+        canvas{
+            //margin-left: 200px;
+        }
+
+    </style>
+</head>
+<audio src="soundFall.wav" id="fall"></audio>
+<body>
+    <p>Game Tertis</p>
+    <div id="3"></div>
+    <div id="score"></div>
+    <div id="level"></div>
+    <p>Next figure is:</p>
+    <canvas height="400" width="552" id="canvas">Update sm</canvas>
+    <p>For managing use:</p>
+    <p>Arrow left - move left</p>
+    <p>Arrow right - move right</p>
+    <p>Space / Arrow down - "drop" figure</p>
+    <p>Arrow up - rotate figure</p>
+    <script src="_main.js"></script>
+</body>
+</html>
